@@ -7,7 +7,6 @@ D:\Development\lucasof\SimpplIDE\SimpplIDE\bin\Debug\net6.0-windows\Newtonsoft.J
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\Litext.csproj.AssemblyReference.cache
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\Litext.Properties.Resources.resources
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\SimpplIDE.About.resources
-D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\SimpplIDE.Form1.resources
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\SimpplIDE.mainForm.resources
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\Litext.csproj.GenerateResource.cache
 D:\Development\lucasof\SimpplIDE\SimpplIDE\obj\Debug\net6.0-windows\Litext.GeneratedMSBuildEditorConfig.editorconfig

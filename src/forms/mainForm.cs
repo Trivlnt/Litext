@@ -36,8 +36,6 @@ namespace SimpplIDE
             this.filePath = filePath;
 
 
-
-            Debug.Write("a");
             if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
             {
                 OpenFile(filePath);
@@ -192,7 +190,9 @@ namespace SimpplIDE
                 { "<html>", Color.Yellow }, { "</html>", Color.Yellow },
                 { "<head>", Color.Yellow }, { "</head>", Color.Yellow },
                 { "<body>", Color.Yellow }, { "</body>", Color.Yellow },
-                { "<title>", Color.LightYellow }, { "</title>", Color.LightYellow },
+                { "<title>", Color.Yellow }, { "</title>", Color.Yellow },
+                { "<a>", Color.Yellow }, { "</a>", Color.Yellow }, { "<a", Color.Yellow },
+                { "href", Color.Cyan }, { "\">", Color.Yellow },
 
                 { "<p", Color.Yellow }, { "<p>", Color.Yellow }, { "</p>", Color.Yellow },
                 { "<h1", Color.Yellow }, { "<h1>", Color.Yellow }, { "</h1>", Color.Yellow },
@@ -323,24 +323,29 @@ namespace SimpplIDE
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFile();
+            SaveFile(filePath);
         }
 
-        public void SaveFile()
+        public void SaveFile(string filePath2)
         {
+            filePath2 = filePath;
             string textToSave = mainInput.Text;
 
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Text Files|*.txt|All files|*.*";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (string.IsNullOrEmpty(filePath))
             {
-                string filePath = saveFileDialog.FileName;
-
-                File.WriteAllText(filePath, textToSave);
-
-                Print("File saved!");
-                UpdateTitle(filePath);
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Text Files|*.txt|All files|*.*";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = saveFileDialog.FileName;
+                }
             }
+
+            if (string.IsNullOrEmpty(filePath)) { Print("Error: File Path is Null or Empty!"); return; }
+
+            File.WriteAllText(filePath, textToSave);
+            Print("File saved!");
+            UpdateTitle(filePath);
         }
 
 
@@ -372,7 +377,7 @@ namespace SimpplIDE
         {
             if (MessageBox.Show("You want to save your file first?", "Litext", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                SaveFile();
+                SaveFile(filePath);
 
             }
 
@@ -385,7 +390,7 @@ namespace SimpplIDE
             {
                 if (MessageBox.Show("Do you want to save your changes?", "Litext", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    SaveFile();
+                    SaveFile(filePath);
                 }
             }
 
@@ -396,6 +401,16 @@ namespace SimpplIDE
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new About().Show();
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFile("");
         }
     }
 

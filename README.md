@@ -1,6 +1,11 @@
-# LiText - Simple and Lightweight Code Editor
+# LiText - Simple and Lightweight Code Editor 📄🪶
 
 Litext is a minimalist code editor designed to provide a streamlined and efficient coding experience. Whether you're a seasoned developer or just starting out, Litext offers the essential features you need without unnecessary complexities.
+
+## Litext
+<img src="https://user-images.githubusercontent.com/74553272/262099821-c39294e4-4475-4d04-bc05-f365d0323029.png" height="480px">
+
+
 
 ## Features
 

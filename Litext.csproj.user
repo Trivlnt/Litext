@@ -4,9 +4,6 @@
     <Compile Update="src\forms\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="src\forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="src\forms\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
