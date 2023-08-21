@@ -32,6 +32,9 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
+            blankToolStripMenuItem = new ToolStripMenuItem();
+            hTMLToolStripMenuItem = new ToolStripMenuItem();
+            pythonToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             saveAsToolStripMenuItem = new ToolStripMenuItem();
@@ -81,10 +84,32 @@
             // 
             // newToolStripMenuItem
             // 
+            newToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { blankToolStripMenuItem, hTMLToolStripMenuItem, pythonToolStripMenuItem });
             newToolStripMenuItem.Name = "newToolStripMenuItem";
             newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "New";
             newToolStripMenuItem.Click += newToolStripMenuItem_Click_1;
+            // 
+            // blankToolStripMenuItem
+            // 
+            blankToolStripMenuItem.Name = "blankToolStripMenuItem";
+            blankToolStripMenuItem.Size = new Size(180, 22);
+            blankToolStripMenuItem.Text = "Blank";
+            blankToolStripMenuItem.Click += blankToolStripMenuItem_Click;
+            // 
+            // hTMLToolStripMenuItem
+            // 
+            hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
+            hTMLToolStripMenuItem.Size = new Size(180, 22);
+            hTMLToolStripMenuItem.Text = "HTML";
+            hTMLToolStripMenuItem.Click += hTMLToolStripMenuItem_Click;
+            // 
+            // pythonToolStripMenuItem
+            // 
+            pythonToolStripMenuItem.Name = "pythonToolStripMenuItem";
+            pythonToolStripMenuItem.Size = new Size(180, 22);
+            pythonToolStripMenuItem.Text = "Python";
+            pythonToolStripMenuItem.Click += pythonToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
@@ -329,5 +354,8 @@
         private ToolStripMenuItem editColorsToolStripMenuItem;
         private ToolStripMenuItem resetColorsToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem blankToolStripMenuItem;
+        private ToolStripMenuItem hTMLToolStripMenuItem;
+        private ToolStripMenuItem pythonToolStripMenuItem;
     }
 }

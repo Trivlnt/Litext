@@ -166,6 +166,10 @@ namespace SimpplIDE
                 { "for", Color.Pink },
                 { "foreach", Color.Pink },
 
+                { "print", Color.BlueViolet },
+                { "Console", Color.BlueViolet },
+                { "Debug", Color.BlueViolet },
+
                 { "'", Color.Orange },
                 { "\"", Color.Orange },
                 { ";", Color.Orange },
@@ -411,6 +415,26 @@ namespace SimpplIDE
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFile("");
+        }
+
+        private void blankToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewFile();
+        }
+
+        private void pythonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewFile();
+            mainInput.Text = "print(\"Hello, World!\");";
+        }
+
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewFile();
+            mainInput.Text = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n" +
+                "     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" " +
+                "content=\"width=device-width, initial-scale=1.0\">\n     " +
+                "<title>Document</title>\n</head>\n<body>\n/body>\n</html>";
         }
     }
 
