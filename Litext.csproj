@@ -11,12 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="src\NovaPasta\**" />
-    <EmbeddedResource Remove="src\NovaPasta\**" />
-    <None Remove="src\NovaPasta\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="assets\Litext.ico" />
   </ItemGroup>
 
@@ -37,6 +31,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="test\" />
   </ItemGroup>
 
 </Project>

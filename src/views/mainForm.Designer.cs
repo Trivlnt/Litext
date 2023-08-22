@@ -86,49 +86,49 @@
             // 
             newToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { blankToolStripMenuItem, hTMLToolStripMenuItem, pythonToolStripMenuItem });
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(180, 22);
+            newToolStripMenuItem.Size = new Size(112, 22);
             newToolStripMenuItem.Text = "New";
             newToolStripMenuItem.Click += newToolStripMenuItem_Click_1;
             // 
             // blankToolStripMenuItem
             // 
             blankToolStripMenuItem.Name = "blankToolStripMenuItem";
-            blankToolStripMenuItem.Size = new Size(180, 22);
+            blankToolStripMenuItem.Size = new Size(112, 22);
             blankToolStripMenuItem.Text = "Blank";
             blankToolStripMenuItem.Click += blankToolStripMenuItem_Click;
             // 
             // hTMLToolStripMenuItem
             // 
             hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            hTMLToolStripMenuItem.Size = new Size(180, 22);
+            hTMLToolStripMenuItem.Size = new Size(112, 22);
             hTMLToolStripMenuItem.Text = "HTML";
             hTMLToolStripMenuItem.Click += hTMLToolStripMenuItem_Click;
             // 
             // pythonToolStripMenuItem
             // 
             pythonToolStripMenuItem.Name = "pythonToolStripMenuItem";
-            pythonToolStripMenuItem.Size = new Size(180, 22);
+            pythonToolStripMenuItem.Size = new Size(112, 22);
             pythonToolStripMenuItem.Text = "Python";
             pythonToolStripMenuItem.Click += pythonToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(112, 22);
             openToolStripMenuItem.Text = "Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(112, 22);
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // saveAsToolStripMenuItem
             // 
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(180, 22);
+            saveAsToolStripMenuItem.Size = new Size(112, 22);
             saveAsToolStripMenuItem.Text = "Save as";
             saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
             // 
@@ -259,14 +259,15 @@
             mainInput.AcceptsTab = true;
             mainInput.AutoWordSelection = true;
             mainInput.BackColor = Color.FromArgb(59, 64, 69);
+            mainInput.BulletIndent = 1;
             mainInput.Dock = DockStyle.Fill;
             mainInput.Font = new Font("Georgia", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             mainInput.ForeColor = SystemColors.Window;
-            mainInput.ImeMode = ImeMode.Hiragana;
             mainInput.Location = new Point(3, 3);
             mainInput.Name = "mainInput";
+            mainInput.ShowSelectionMargin = true;
             mainInput.Size = new Size(862, 458);
-            mainInput.TabIndex = 5;
+            mainInput.TabIndex = 1;
             mainInput.TabStop = false;
             mainInput.Text = "";
             mainInput.TextChanged += mainInput_TextChanged;
@@ -306,6 +307,7 @@
             // 
             // mainForm
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
@@ -316,7 +318,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "mainForm";
             Text = "Litext";
-            Load += mainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             tabPage1.ResumeLayout(false);

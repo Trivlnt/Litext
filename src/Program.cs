@@ -1,3 +1,4 @@
+using Litext;
 using SimpplIDE;
 
 static class Program
@@ -10,8 +11,8 @@ static class Program
 
         if (args.Length > 0)
         {
-            // Se houver argumentos, o primeiro argumento é o caminho do arquivo
             string filePath = args[0];
+            FilesManager.Instance.SetFilePath(filePath);
 
             Application.Run(new mainForm(filePath));
         }
